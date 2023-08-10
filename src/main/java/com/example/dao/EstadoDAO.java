@@ -3,12 +3,12 @@ package com.example.dao;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class EstadoDAO {
-    private Connection conn;
-
+public class EstadoDAO extends DAO {
+  
     public EstadoDAO(Connection conn) {
-        this.conn = conn;
+        super(conn);
     }
+
     public void listar() {
         try{
             var statement = conn.createStatement();
